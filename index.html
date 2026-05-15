@@ -1,0 +1,130 @@
+# QuizNova
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizNova</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- START PAGE -->
+
+    <div id="start-page" class="container">
+
+        <h1>QuizNova</h1>
+
+        <p class="subtitle">
+            AI Powered Quiz Generator
+        </p>
+
+        <input type="text" id="user-name" placeholder="Enter Your Name">
+
+        <input type="text" id="topic-name" placeholder="Enter Topic">
+
+        <select id="difficulty">
+
+            <option value="easy">Easy</option>
+
+            <option value="medium">Medium</option>
+
+            <option value="hard">Hard</option>
+
+        </select>
+
+        <select id="question-count">
+
+            <option value="5">5 Questions</option>
+
+            <option value="10">10 Questions</option>
+
+            <option value="15">15 Questions</option>
+
+        </select>
+
+        <button id="generate-btn">
+            Generate Quiz
+        </button>
+
+        <button id="start-btn" disabled>
+            Start Quiz
+        </button>
+
+        <p id="status-text"></p>
+
+    </div>
+
+
+    <!-- QUIZ PAGE -->
+
+    <div id="quiz-page" class="container" style="display: none;">
+
+        <div class="top-bar">
+
+            <span id="question-number">
+                Question 1
+            </span>
+
+            <span id="timer">
+                30s
+            </span>
+
+        </div>
+
+        <div id="question-box">
+
+            Question Here
+
+        </div>
+
+        <div id="options-box">
+
+        </div>
+
+        <div id="explanation-box">
+
+        </div>
+
+        <button id="next-btn">
+            Next Question
+        </button>
+
+    </div>
+
+
+    <!-- RESULT PAGE -->
+
+    <div id="result-page" class="container" style="display: none;">
+
+        <h1>
+            Quiz Finished
+        </h1>
+
+        <h2 id="final-score">
+
+        </h2>
+
+        <p id="best-streak">
+
+        </p>
+
+        <div id="review-section">
+
+        </div>
+
+        <button onclick="location.reload()">
+            Restart Quiz
+        </button>
+
+    </div>
+
+    <script src="syn.js"></script>
+
+</body>
+
+</html>
